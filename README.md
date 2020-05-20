@@ -20,7 +20,8 @@ In a natural disaster situation people communicates on social media expressing t
 
 
 
-###Files/Folders :
+### Files/Folders :
+
 All the below folders are contained in disaster_response_pipeline_project.
 
 1. app: contains all the files relating to the web API development.
