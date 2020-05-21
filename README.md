@@ -19,7 +19,7 @@ In a natural disaster situation people communicates on social media expressing t
 3. Go to http://0.0.0.0:3001/
 
 
-### Requirements :
+> ### Requirements :
 
 Flask
 
@@ -36,35 +36,35 @@ sklearn
 sqlalchemy
 
 
-### Files/Folders Structure:
+> ### Files/Folders Structure:
 
-- app
+*app
 
-| - template
+* - template
 
-| |- master.html  # main page of web app
+* |- master.html  # main page of web app
 
-| |- go.html  # classification result page of web app
+* |- go.html  # classification result page of web app
 
-|- run.py  # Flask file that runs app
-
-
-- data
-
-|- disaster_categories.csv  # data to process 
-
-|- disaster_messages.csv  # data to process
-
-|- process_data.py
-
-|- InsertDatabaseName.db   # database to save clean data to
+* run.py  # Flask file that runs app
 
 
-- models
+* data
 
-|- train_classifier.py
+* disaster_categories.csv  # data to process 
 
-|- classifier.pkl  # saved model 
+* disaster_messages.csv  # data to process
+
+* process_data.py
+
+*  InsertDatabaseName.db   # database to save clean data to
+
+
+* models
+
+* train_classifier.py
+
+* classifier.pkl  # saved model 
 
 
 All the below folders are contained in disaster_response_pipeline_project.
@@ -78,6 +78,6 @@ All the below folders are contained in disaster_response_pipeline_project.
 4. imgs: contains screenshots of tha app.
 
 
-### Screenshots :
+> ### Screenshots :
 
 Here are some screeshots of the API:
