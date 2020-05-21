@@ -1,11 +1,11 @@
 # Disaster Response Pipeline Project
 
 
-### Overview:
+> ### Overview:
 In a natural disaster situation people communicates on social media expressing their needs and asks for help. We want to keep tracks of those relevant conversation, identifying people who are in need by categorizing the message and text messages sent around that location at that time. For example, we would like to know if a message is related to the disaster or not, or if the message is about food shortage, water depletion, or a child being alone. The results may then be forwarded to disaster relief agencies so that help can be provided promptly.
 
 
-### Instructions:
+> ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
@@ -21,24 +21,20 @@ In a natural disaster situation people communicates on social media expressing t
 
 > ### Requirements :
 
-Flask
+* Flask
 
-NLTK
+* plotly
 
-numpy
+* NLTK
 
-pandas
+* sklearn
 
-plotly
-
-sklearn
-
-sqlalchemy
+* sqlalchemy
 
 
 > ### Files/Folders Structure:
 
-*app
+* app
 
 * - template
 
