@@ -37,9 +37,9 @@ In a natural disaster situation people communicate through different means expre
 
 * models
 
- - train_classifier.py
+  - train_classifier.py
 
- - classifier.pkl  []: # saved model 
+  - classifier.pkl  []: # saved model 
 
 All the above folders are contained in Disaster_Response_Pipelines.
 
@@ -70,6 +70,6 @@ All the above folders are contained in Disaster_Response_Pipelines.
 
 Here are some screeshots of the API:
 
-![Alt text]('https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot1.png')
+![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot1.png)
 
-![Alt text]('https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot2.png')
+![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot2.png)
