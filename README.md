@@ -19,22 +19,6 @@ In a natural disaster situation people communicates on social media expressing t
 3. Go to http://0.0.0.0:3001/
 
 
-
-### Files/Folders :
-
-All the below folders are contained in disaster_response_pipeline_project.
-
-1. app: contains all the files relating to the web API development.
-
-2. data: contains the raw data, data processing script and its corresponding jupyter notebook.
-
-3. models: contains the model training and saving script along with its jupyter notebook.
-
-4. imgs: contains screenshots of tha app.
-
-'Note: Look into each folder's README to find more information about its contents.'
-
-
 ### Requirements :
 
 Flask
@@ -50,3 +34,39 @@ plotly
 sklearn
 
 sqlalchemy
+
+
+### Files/Folders Structure:
+
+- app
+| - template
+| |- master.html  # main page of web app
+| |- go.html  # classification result page of web app
+|- run.py  # Flask file that runs app
+
+- data
+|- disaster_categories.csv  # data to process 
+|- disaster_messages.csv  # data to process
+|- process_data.py
+|- InsertDatabaseName.db   # database to save clean data to
+
+- models
+|- train_classifier.py
+|- classifier.pkl  # saved model 
+
+
+
+All the below folders are contained in disaster_response_pipeline_project.
+
+1. app: contains all the files relating to the web API development.
+
+2. data: contains the raw data, data processing script and its corresponding jupyter notebook.
+
+3. models: contains the model training and saving script along with its jupyter notebook.
+
+4. imgs: contains screenshots of tha app.
+
+
+### Screenshots :
+
+Here are some screeshots of the API:
