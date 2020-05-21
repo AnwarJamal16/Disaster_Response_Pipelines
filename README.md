@@ -1,7 +1,7 @@
 # Disaster Response Pipeline Project
 
 > ### Overview:
-In a natural disaster situation people communicates on social media expressing their needs and asks for help. We want to keep tracks of those relevant conversation, identifying people who are in need by categorizing the message and text messages sent around that location at that time. For example, we would like to know if a message is related to the disaster or not, or if the message is about food shortage, water depletion, or a child being alone. The results may then be forwarded to disaster relief agencies so that help can be provided promptly.
+In a natural disaster situation people communicate through different means expresses their needs and asks for help. We want to keep track of those relevant messages, identifying people who are in need of categorizing the message. We are using disaster data from Figure Eight to build a model that classifies disaster messages. We will develop a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
 
 > ### Requirements :
 
@@ -21,9 +21,9 @@ In a natural disaster situation people communicates on social media expressing t
 
   - template
 
-  - master.html   []: # main page of web app
+    - master.html   []: # main page of web app
 
-  - go.html  []: # classification result page of web app
+    - go.html  []: # classification result page of web app
 
 * data
 
@@ -69,3 +69,5 @@ All the above folders are contained in Disaster_Response_Pipelines.
 > ### Screenshots :
 
 Here are some screeshots of the API:
+
+![Alt text](/path/to/image.jpg)
