@@ -30,25 +30,25 @@ The project is divided in three different sections:
 
   - template
 
-    - master.html   []: # main page of web app
+    - master.html    `main page of web app'
 
-    - go.html  []: # classification result page of web app
+    - go.html        `classification result page of web app`
 
 * data
 
-  - disaster_categories.csv  []: # data to process 
+  - disaster_categories.csv   `data to process  `
 
-  - disaster_messages.csv  []: # data to process
+  - disaster_messages.csv     `data to process `
 
-  - process_data.py
+  - process_data.py           `to data clean  `
 
-  - InsertDatabaseName.db   []: # database to save clean data to
+  - InsertDatabaseName.db     `database to save clean data  `
 
 * models
 
-  - train_classifier.py
+  - train_classifier.py   `training process `
 
-  - classifier.pkl  []: # saved model 
+  - classifier.pkl        `saved model `
 
 All the above folders are contained in Disaster_Response_Pipelines.
 
@@ -83,6 +83,7 @@ Here are some screeshots of the API:
 
 ![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot2.png)
 
+![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot3.png)
 
 > ### Acknowledgement:
 
