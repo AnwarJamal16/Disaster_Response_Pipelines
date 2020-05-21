@@ -1,9 +1,18 @@
 # Disaster Response Pipeline Project
 
 > ### Overview:
-In a natural disaster situation people communicate through different means expresses their needs and asks for help. We want to keep track of those relevant messages, identifying people who are in need of categorizing the message. We are using disaster data from Figure Eight to build a model that classifies disaster messages. We will develop a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
+In a natural disaster situation people communicate through different means expresses their needs and asks for help. We want to keep track of those relevant messages, identifying people who are in need of by categorizing the message. I have applied my data engineering and NLP skills to analyze disaster data from Figure Eight to build a model for an API that classifies disaster messages
 
-> ### Requirements :
+The project is divided in three different sections:
+
+1.	Data Processing, ETL pipeline to extract data from sources and to clean it finally save it in sqlite database
+
+2.	Machine Learning Pipeline to train model to be able to classify messages in categories
+
+3.	Web App to show model results also to predict new messages in real-time
+
+
+> ### Python libraries needed :
 
 * Flask
 
@@ -73,3 +82,10 @@ Here are some screeshots of the API:
 ![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot1.png)
 
 ![Alt text](https://github.com/AnwarJamal16/Disaster_Response_Pipelines/blob/master/Disaster_Response_Pipelines/img/screen_shot2.png)
+
+
+> ### Acknowledgement:
+
+* Udacity For great course materials
+
+* Figure Eight For the effort made to collect the dataset
