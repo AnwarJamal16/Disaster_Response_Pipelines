@@ -3,12 +3,25 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+    
+    '''
+    load messages and categories  datasets 
+    Merge the messages and categories datasets using the common id.
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath, sep = ',')
     df = pd.merge(messages, categories, on = 'id')
     return df
 
 def clean_data(df):
+    
+    '''
+    clean datasets by following steps
+    Split categories into separate category columns.
+    Convert category values to just numbers 0 or 1
+    Replace categories column in df with new category columns.
+    Remove duplicates
+    '''
     categories = df['categories'].str.split(';', expand = True)
     category_colnames = categories.iloc[0,:].str.replace(r'\-\d$',\
 '',regex = True)
@@ -24,11 +37,17 @@ def clean_data(df):
     return df
 
 def save_data(df, database_filename):
+    
+    '''
+    Save the clean dataset into an sqlite database
+    '''
     engine = create_engine('sqlite:///'+ database_filename)
     df.to_sql('messages', engine, index=False, if_exists = 'replace')
 
 
 def main():
+    
+    
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]

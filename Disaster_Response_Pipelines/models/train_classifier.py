@@ -24,6 +24,10 @@ from sklearn.metrics import classification_report
 
 # defining functions
 def load_data(database_filepath):
+    
+    '''
+    load data from database
+    '''
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql('SELECT * FROM messages',engine)
     X = df.message
@@ -34,7 +38,7 @@ def load_data(database_filepath):
 def tokenize(text):
     
     '''
-    tokenizes a sentence after normalizing it and returns lemmatized 	 tokens.
+    tokenization function to process text data.
     '''
     # normalizing, tokenizing, lemmatizing the sentence
     sentence = re.sub('\W',' ',text)
@@ -46,20 +50,44 @@ def tokenize(text):
      
 
 def build_model():
+    
+    '''
+    1- Build a machine learning pipeline
+    2- Improve the model using GridSearchCV function to find the best parameters
+    '''
+    
     pipeline_ada = Pipeline([
         ('vect',CountVectorizer(tokenizer = tokenize)),
         ('tfidf',TfidfTransformer(use_idf = True)),
         ('clf', MultiOutputClassifier(RandomForestClassifier(class_weight='balanced')))
 	])
-    return pipeline_ada
+    
+    parameters = {'clf__estimator__criterion' :['gini'],
+              'clf__estimator__max_depth': [2, 5], 
+              'clf__estimator__n_estimators': [50,100]}
+    
+    cv = GridSearchCV(pipeline, param_grid=parameters, n_jobs = -1, verbose=3)
+    
+    return cv
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    
+    '''
+    Test model 
+    Show the accuracy, precision, and recall of the tuned model. 
+    '''
+    
     y_pred = model.predict(X_test)
     for i, col in enumerate(category_names): 
         print('-------:',col,':-------')
         print(classification_report(Y_test.iloc[:,i], y_pred[:,i]))
 
 def save_model(model, model_filepath):
+    
+    '''
+    Export or save model as a pickle file
+    '''
+    
     joblib.dump(model, model_filepath)
     
 
